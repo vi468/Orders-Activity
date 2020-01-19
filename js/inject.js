@@ -5,9 +5,6 @@ window.addEventListener('DOMContentLoaded', async () => {
     let page = document.body.innerHTML;
     let marketID = page.match(/Market_LoadOrderSpread\(\s*(\d+)\s*\);/);
 
-    const regexp = new RegExp('eamID\\s\+=\\s\+\"(\\d+)\"');
-    let steamID = page.match(regexp)[1];
-
     if (checkDiv != null || marketID == null) {
         return false;
     }
