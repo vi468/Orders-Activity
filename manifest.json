@@ -1,0 +1,41 @@
+{
+
+    "manifest_version": 2,
+    "name": "Orders Activity",
+    "version": "1.0",
+
+    "icons": {
+        "16": "/images/icons/icon16.png",
+        "48": "/images/icons/icon48.png",
+        "128": "/images/icons/icon128.png"
+    },
+
+    "browser_action": {
+        "default_title": "Orders Activity",
+        "default_icon": "/images/icons/icon16.png"
+    },
+
+    "author": "https://vk.com/id224648541",
+
+    "content_scripts": [
+        {
+
+            "matches": [
+                "https://steamcommunity.com/market/listings/*"
+            ],
+
+            "js": [
+                "/js/inject.js"
+            ],
+
+            "run_at": "document_start"
+
+        }
+
+    ],
+
+    "permissions": [
+        "https://steamcommunity.com/*"
+    ]
+
+}
